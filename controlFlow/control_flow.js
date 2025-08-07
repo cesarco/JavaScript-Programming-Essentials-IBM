@@ -50,3 +50,24 @@ let isAuthenticated = true;
 
 let authenticated = isAuthenticated ? "Authenticated" : "Not authenticated";
 console.log("Authentication Status:", authenticationStatus);
+
+
+let programRole  = "Enrolled Member";
+let accessMessage;
+
+if (programRole  === "employ"){
+    accessMessage = "You are authorized to access the Dietary Services.";
+} else if (programRole  === "Enrolled Member") {
+    accessMessage = "You are authorized to access the Dietary Services and have one-on-one interaction with a dietician.";
+}
+else if (programRole  === "Subscriber") {
+    accessMessage = "You have partial access to the Dietary Services.";
+}
+else if (programRole  === "Non-Subscriber") {
+    accessMessage = "Please enroll or subscribe first to access the Dietary Services.";
+} else {
+    accessMessage = "Invalid role provided. Please contact the administrator.";
+}
+
+console.log("Dietary Services Access:");
+console.log(accessMessage);
